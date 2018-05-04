@@ -1,9 +1,16 @@
-
 {% extends 'base.html'%}
 {% include "navbar.html"%}
 
 {% block content%}
 {{block.super}}
 <h1>Welcome To My Photo Gallery</h1>
+
+  {% for image_item in pics %}
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <img src="{{image_item.image.url}}" class="img-responsive" alt="Image">
+    </div>
+    <hr>
+  {% endfor %}
+
 
 {% endblock %}
