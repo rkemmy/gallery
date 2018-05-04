@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div class="container">
+
+  <div class="row">
+    {% if image %}
+      <h2>Found {{ image|length }} of searched category {{message}}</h2>
+    {% else %}
+      <h2>Found 0 images that match that request <br> {{message}}</h2>
+    {% endif %}
+
+  </div>
+
+  <div class="row">
+    {% if image %}
+      {% for image in image %}
+        <div class="col-sm-6 col-md-3">
+          <img src="{{image.image.url}}" alt="Image">
+          
+        </div>
+      {% endfor %}
+    {% endif %}
+
+  </div>
+
+</div>
+{% endblock %}
