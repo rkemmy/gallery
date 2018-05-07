@@ -15,9 +15,20 @@
   <div class="row">
     {% if image %}
       {% for image in image %}
-        <div class="col-sm-6 col-md-3">
-          <img src="{{image.image.url}}" alt="Image">
-          
+
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
+
+          <div class="card" style="width: 18rem;">
+            <a href="{{image.image.url}}" data-lightbox="gallery">
+              <img class="card-img-top" src="{{image.image.url}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">{{image.name.capitalize}}</h3>
+              <p class="card-text">{{image.description}}</p>
+              <button onclick="myFunction()" onmouseout="outFunc()" class="btn btn-outline-info"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy </button>
+
+            </div>
+          </div>
         </div>
       {% endfor %}
     {% endif %}
