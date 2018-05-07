@@ -9,15 +9,21 @@
   {% block styles%}
     {% bootstrap_css%}
     <link href="https://fonts.googleapis.com/css?family=Lustria" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
   {% endblock%}
 
 </head>
 <body>
     {% include "navbar.html" %}
 
-    {% block content %}  {%endblock%}
+    {% block content %}
+
+    <script src="{% static 'js/jquery-3.2.1.js'%}"></script>
+    <script src="{% static 'js/lightbox.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
 
 
+    {%endblock%}
 </body>
 </html>
