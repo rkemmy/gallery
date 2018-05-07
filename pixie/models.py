@@ -8,11 +8,17 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+    def location_save():
+        self.save()
+
 class Category(models.Model):
     name = models.CharField(max_length = 30)
 
     def __str__(self):
         return self.name
+
+    def category_save(self):
+        self.save()
 
     @classmethod
     def search_by_category(cls,search_term):
@@ -25,6 +31,13 @@ class Image(models.Model):
     description = models.CharField(max_length = 256)
     category = models.ManyToManyField(Category)
     location = models.ForeignKey(Location)
+    #pub_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    def save_image(self):
+        self.save()
 
     @classmethod
     def get_all(cls):
