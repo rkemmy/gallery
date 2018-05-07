@@ -8,7 +8,7 @@
 
 
   <h1>Welcome To My Photo Gallery</h1>
-
+  <div class="well">
     <div class="row">
       {% for image_item in pics %}
 
@@ -21,22 +21,14 @@
             <div class="card-body">
               <h3 class="card-title">{{image_item.name.capitalize}}</h3>
               <p class="card-text">{{image_item.description}}</p>
+              <button onclick="myFunction()" onmouseout="outFunc()" class="btn btn-outline-info"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy </button>
 
             </div>
           </div>
-
         </div>
-
-
       {% endfor %}
-        <hr>
 
     </div>
-
-
-
-
-
-
+  </div>
 
 {% endblock %}
