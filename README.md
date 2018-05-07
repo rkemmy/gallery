@@ -1,11 +1,12 @@
 # Galleremmy
 
 Developer: Risper Kemunto
-##Description
+
+## Description
 This is a Django web app that allows the admin to post pictures, delete posted pics, edit pic details.
 It allows users to search for pics according to categories
 
-##Specifications
+## Specifications
 It has an administration dashboard that allows the admin to post new pics, edit them and delete existing pics.
 
 ## Setup/Installation Requirements
